@@ -1,0 +1,24 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>Js绘制生成花瓣效果</title>
+</head>
+<body>
+	<script Language="javascript">
+	function a(x,y,color)
+	{document.write("<img border='0' style='position: absolute; left: "+(x+300)+"; top: "+(y+200)+";background-color: "+color+"' src='px.gif' width=1 height=1>")}
+	</script>
+	<script>
+	for(t=1;t<=360;t++){
+		lo=200 * Math.sin(2 * (Math.PI / 180) * t);
+		x = lo * Math.cos((Math.PI / 180) * t);
+		y = lo * Math.sin((Math.PI / 180) * t); 
+		a(x,y,"#000000");
+		lo=200 * Math.cos(2 * (Math.PI / 180) * t);
+		x = lo * Math.cos((Math.PI / 180) * t);
+		y = lo * Math.sin((Math.PI / 180) * t); 
+		a(x,y,"#ff0000");
+	}
+	</script>
+</body>
+</html>
